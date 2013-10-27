@@ -1,0 +1,24 @@
+<html>
+	<head>
+	<title>MVC Express Skeleton</title>
+	</head>
+	<body>
+		<p>This is a skeleton app for creating an MVC application in express</p>
+		<ul>The approach is as follows:
+			<li>By convention requests are routed to files in the handlers directory based on the url</li>
+			<li>http://localhost:3000/show/me/the/money would expect to find show.js in the handlers directory</li>
+			<li>The handler files receive the request and response objects as parameters.
+				<p>The handler then calls a model file in the models folder with the request and response objects and a callback function.</p>
+				<p>The callback has two arguments. The first is error information and the second is the results.</p>
+				<p>The callback should then send the response as appropriate</p>
+				</li>
+			<li>It is the responsibility of the model file to extract and prepare data as necessary and pass that data to a service object to preform the actual work.
+				<p>The service object should callback to the model when finished.</p>
+				<p>The model should then callback to the handler.</p>
+				<p>In most cases the service object would be accessing database information.
+				</li>
+		</ul>
+		<p>The codeset has a sample accessed by <a href="/list/"> http://localhost:3000/list/</a> This sample does not interact with a database.</p>
+			
+	</body>
+</html>
